@@ -54,7 +54,6 @@ const SignUp: React.FC = () => {
           abortEarly: false,
         });
 
-        console.log('data', data);
         await api.post('/users', data);
 
         Alert.alert(
@@ -69,8 +68,6 @@ const SignUp: React.FC = () => {
           formRef.current?.setErrors(errors);
           return;
         }
-
-        console.log('err', err);
 
         Alert.alert(
           'Erro no cadastro',
